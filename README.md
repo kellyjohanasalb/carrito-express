@@ -1,50 +1,143 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
->>>>>>> fb16393368f500577552d1438f50d7faa02d191f
+# 🛒 Carrito Express
 
-## Getting Started
+**Carrito Express** es una aplicación de e-commerce desarrollada con **Next.js**, **React**, **Bootstrap** y **JavaScript**, que permite a los usuarios explorar productos, agregarlos al carrito y simular una experiencia de compra simple y funcional.
 
-First, run the development server:
+El objetivo del proyecto es construir una tienda online moderna con una interfaz clara y una experiencia fluida, integrando lógica de carrito de compras y funcionalidades básicas de un ecommerce.
+
+
+Este proyecto es ideal para demostrar habilidades prácticas en el desarrollo web moderno, la comunicación entre frontend y backend y el manejo de rutas y peticiones HTTP.
+
+## 🚀 Tecnologías utilizadas
+
+- [Next.js](https://nextjs.org/) – Framework de React para apps web con renderizado del lado del servidor.
+- [React](https://reactjs.org/) – Librería de JavaScript para construir interfaces de usuario.
+- [Bootstrap](https://getbootstrap.com/) – Framework de CSS para diseño responsive.
+- [JavaScript (ES6+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Lenguaje de programación.
+- [Vercel](https://vercel.com/) – Plataforma de despliegue.
+
+## 🌐 Demo en producción
+
+Puedes ver el proyecto en funcionamiento aquí:  
+🔗 [https://react-express-store.vercel.app](https://react-express-store.vercel.app)
+
+---
+
+## ⚙️ Instalación y ejecución local
+
+1. **Clona el repositorio**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/kellyjohanasalb/carrito-express.git
+cd carrito-express
+---
+
+## 📁 Estructura del proyecto
+
+```
+carrito-express/
+├── components/       # Componentes de React
+│   ├── BestCombination.jsx
+│   ├── Cart.jsx
+│   └── ProductList.jsx
+├── pages/            # Rutas y API
+│   ├── api/
+│   │   ├── cart.js
+│   │   └── products.js
+│   └── index.js      # Página principal
+├── public/           # Archivos estáticos
+├── styles/           # Estilos CSS
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-<<<<<<< HEAD
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## ⚙️ Instalación y ejecución del proyecto localmente
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### 1. Clona el repositorio
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```bash
+git clone https://github.com/kellyjohanasalb/carrito-express.git
+cd carrito-express
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-=======
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
->>>>>>> fb16393368f500577552d1438f50d7faa02d191f
+### 2. Instalación de dependencias
 
-## Learn More
+#### Backend
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+cd backend
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+#### Frontend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+cd ../frontend
+npm install
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Ejecución del proyecto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+#### Inicia el servidor backend
+
+```bash
+cd backend
+npm run dev
+```
+
+Esto levantará el backend en:  
+📡 **http://localhost:3000/**
+
+#### Inicia el frontend
+
+```bash
+cd ../frontend
+npm run dev
+```
+
+Esto abrirá la interfaz React en:  
+🌐 **http://localhost:5173/**
+
+---
+
+## 🌍 Despliegue en Vercel
+
+Puedes acceder a la versión desplegada del frontend aquí:
+
+🔗 [https://carrito-express.vercel.app](carrito-express.vercel.app) 
+
+
+
+---
+
+## 🧪 Funcionalidades
+
+- 📋 Registro de productos con nombre y precio
+- 📊 Visualización en tabla
+- ❌ Eliminación de productos
+- 🔄 Sincronización entre frontend y backend
+- 🎨 Interfaz simple y clara usando Bootstrap
+
+---
+
+## 📌 Consideraciones para el despliegue
+
+- Cambia la URL del backend en el frontend (`src/components/Formulario.jsx` y `TablaProductos.jsx`) cuando hagas el despliegue.
+- Verifica que CORS esté habilitado correctamente en el backend (`index.js`).
+- Asegúrate de subir ambos proyectos a plataformas compatibles:  
+  - **Frontend:** Vercel  
+  - **Backend:** Render / Railway / Cyclic / Fly.io
+
+---
+
+## 🙋‍♀️ Autora
+
+Desarrollado por **Kelly Johana Saldaña Betancur**  
+[GitHub](https://github.com/kellyjohanasalb)
+
