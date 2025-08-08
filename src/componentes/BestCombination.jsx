@@ -1,7 +1,7 @@
 import { Alert, ListGroup, Badge } from 'react-bootstrap';
 
 const findBestCombination = (products, budget) => {
-  // Algoritmo de la mochila (programación dinámica)
+  
   const dp = Array(budget + 1).fill(0);
   const selected = Array(budget + 1).fill().map(() => []);
 
